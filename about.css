@@ -5,7 +5,7 @@
 body {
     min-height: 100vh;
     margin: 0;
-    background: linear-gradient(to right top, red, blue);
+    background: linear-gradient( 45deg, red, blue);
     color: #f0f0f0;
 }
 

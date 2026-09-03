@@ -6,7 +6,7 @@ body{
      font-family: montserrat, sans-serif;
     font-weight: 300; 
     height: 200px;
-  background: linear-gradient(to right top, red, blue);
+  background: linear-gradient( 45deg,  red, blue);
     color: #f0f0f0;
     height: 100%;
     animation: pageEnter 0.5s ease;
