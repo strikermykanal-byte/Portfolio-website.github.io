@@ -45,3 +45,40 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e)
         setTheme(e.matches ? 'dark' : 'light');
     }
 });
+const form = document.getElementById('form');
+const ThankYouMessage = document.getElementById('thank-you-message');
+ form.addEventListener('submit', function(e){
+
+    e.preventDefault();
+
+    const email = document.getElementById('email').value.trim();
+    const username = document.getElementById('psw').value.trim();
+    const phone = document.getElementById('numb-phone').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if(!email || !username || !phone || !message){
+        alert('Please fill in all fields');
+        return;
+    }
+
+    fetch(form.action, {
+        method:"POST",
+         body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+    })
+    .then(response=>{
+        if(response.ok){
+        form.style.display = 'none';
+        ThankYouMessage.textContent = 'Thank you for information';
+        ThankYouMessage.style.display = 'block';
+        } 
+        else{
+            alert('Something went wrong, please try again.');
+      }
+
+      
+    })
+    .catch(() => alert('Something went wrong, please try again.'));
+    
+ });
+ 

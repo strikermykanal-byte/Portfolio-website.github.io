@@ -49,7 +49,10 @@
                 <span class="toggle-text"></span>
             </button>
 
-
+<form action=
+"https://formspree.io/f/xgaezjak"
+method="POST"
+>
             <!-- Email -->
             <label for="email">
                 <b>
@@ -65,8 +68,8 @@
                 required
             >
 
-
-            <!-- Username -->
+            
+<!-- Username -->
             <label for="psw">
                 <b>
                     UserName
@@ -97,9 +100,24 @@
                 placeholder="Enter your phone number"
                 required
             >
-
+            <label for="message">
+                <b>Message  <i class="fa-solid fa-comment"></i></b>
+            </label>
+            <textarea
+             name="message" 
+             id="message"
+             placeholder="Leave your message here"
+             rows="5"
+             required
+            ></textarea>
             <hr>
-
+            <div class="enterBtn">
+                <button id="enter-btn">Confirm <i class="fa-duotone fa-solid fa-check-to-slot"></i></button>
+            </div>
+            </form>
+            <p id="thank-you-message" style="display: none; color: green;";></p>
+            
+            
         </div>
 
     </main>

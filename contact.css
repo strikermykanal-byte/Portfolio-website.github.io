@@ -278,3 +278,19 @@ input:focus {
         font-size: 40px;
     }
 }
+.enterBtn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px ;
+    scale: 1.2;
+}
+textarea{
+    width: 100%;
+    gap: 8px;
+    padding: 8px;
+    font-family: inherit;
+    resize: vertical;
+    border-radius: 15px;
+}
